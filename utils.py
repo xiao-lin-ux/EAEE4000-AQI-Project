@@ -25,6 +25,10 @@ def df_prep(file):
     test = test.reset_index(drop=True)
     return train, test
 
+def df_prep_full(file):
+    df = pd.read_csv(file)
+    return df
+
 def make_dir(path):
     if os.path.exists(path) is False:
         os.makedirs(path)
